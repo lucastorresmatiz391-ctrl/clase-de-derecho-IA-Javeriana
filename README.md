@@ -1,46 +1,37 @@
-# ⚖️🤖 Proyecto Final — Derecho e Inteligencia Artificial
-
-**Pontificia Universidad Javeriana · 2026-II · Docente: Pedro Ardila**
-
-> **Estudiante:** [escribe aquí tu nombre completo]
-> **Nombre del proyecto:** [escribe aquí el nombre de tu herramienta]
-> **Fecha de inicio:** [AAAA-MM-DD]
-
----
-
-Bienvenido/a a tu repositorio de proyecto. **Este archivo es tu tablero de mando**: aquí describes tu proyecto, planificas su desarrollo y dejas evidencia del avance. Lo vas a completar por partes, siguiendo el curso.
-
-📌 Si ya habías escrito una descripción de tu proyecto cuando creaste el repo, la encuentras intacta en `README-ORIGINAL.md`. Úsala como punto de partida para la Parte 1 — no empieces de cero.
-
-**No necesitas saber programar.** Todo el código lo construirás con asistencia de IA (*vibe coding*). Tu valor como estudiante de derecho está en el problema que eliges, las fuentes que alimentas, las instrucciones que diseñas y el juicio crítico con el que evalúas el resultado.
-
----
-
 ## 📋 Parte 1 — Descripción del proyecto
 
-> Completa cada sección con 3–10 frases. Sé concreto/a: esta descripción es la que tu IA usará como contexto y la que el docente usará para realimentarte.
-
 ### 1.1 El problema jurídico
-¿Qué problema **real del derecho colombiano** resuelve tu herramienta? ¿Quién lo sufre hoy y cómo lo resuelve sin tu herramienta?
+
+El problema jurídico que resuelve nuestra herramienta es determinar si un aumento del canon de arrendamiento de vivienda urbana en Colombia cumple con los límites establecidos por la ley. Este problema afecta principalmente a arrendatarios que reciben aumentos y no saben si el valor cobrado es legal. Actualmente, pueden buscar información en internet, hacer cálculos por su cuenta o consultar a un abogado, lo que puede resultar confuso. Nuestra herramienta permite realizar una primera verificación de manera sencilla y conocer la norma aplicable.
 
 ### 1.2 Usuarios
-¿Quién va a usarla? Describe a tu usuario ideal en una frase (ej. *"un arrendatario bogotano que le subieron el canon de arrendamiento más del límite legal"*). Recuerda que al final necesitas **al menos un usuario real** que la pruebe.
+
+El usuario ideal es un arrendatario colombiano de vivienda urbana al que le aumentaron el canon y quiere saber si el aumento cumple con la ley. También puede ser utilizada por arrendadores que quieran verificar sus aumentos. Está dirigida principalmente a personas sin conocimientos especializados en derecho. Al finalizar el proyecto, al menos un usuario real probará la herramienta.
 
 ### 1.3 Qué hace y qué NO hace (alcance)
-| ✅ Sí hace | ❌ No hace |
-| --- | --- |
-| [funcionalidad 1] | [fuera de alcance 1] |
-| [funcionalidad 2] | [fuera de alcance 2] |
+
+| ✅ Sí hace                                                        | ❌ No hace                                         |
+| ---------------------------------------------------------------- | ------------------------------------------------- |
+| Calcula el aumento máximo permitido.                             | No reemplaza la asesoría de un abogado.           |
+| Verifica si han pasado los 12 meses necesarios para el reajuste. | No representa al usuario ante autoridades.        |
+| Compara el aumento con el límite legal.                          | No determina el resultado de un proceso judicial. |
+| Explica las normas aplicables.                                   | No redacta ni presenta demandas.                  |
+| Cita la fuente normativa utilizada.                              | No analiza otros tipos de contratos.              |
 
 *Consejo de abogado: un alcance pequeño y perfecto vale más que uno grande y roto.*
 
 ### 1.4 Marco jurídico y fuentes
+
 ¿Qué normas alimentan tu herramienta? Lista tu corpus normativo (leyes, decretos, sentencias — debe ser **pequeño y público**):
-- [ ] Norma/sentencia 1: [nombre + enlace]
-- [ ] Norma/sentencia 2: [nombre + enlace]
+
+* [ ] **Ley 820 de 2003:** Régimen de Arrendamiento de Vivienda Urbana, especialmente el artículo 20. https://www.secretariasenado.gov.co/senado/basedoc/ley_0820_2003.html
+* [ ] **DANE — Índice de Precios al Consumidor (IPC):** fuente para determinar el porcentaje máximo de reajuste. https://www.dane.gov.co/index.php/estadisticas-por-tema/precios-y-costos/indice-de-precios-al-consumidor-ipc
 
 ### 1.5 Nombre y lema
-Un nombre corto para tu herramienta y una frase que explique qué hace (la usarás en la demo del día de presentaciones).
+
+**Nombre:** ArrendamientoClaro
+
+**Lema:** “¿Te subieron el arriendo? Comprueba si el aumento cumple la ley.”
 
 ---
 
@@ -48,21 +39,22 @@ Un nombre corto para tu herramienta y una frase que explique qué hace (la usar�
 
 Marca cada hito cuando lo termines. Los hitos siguen las sesiones del curso.
 
-- [ ] **M0 — Descripción y plan** *(con Sesión 1)*: Partes 1 y 2 de este README completas.
-- [ ] **M1 — Asistente con instrucciones v1** *(Sesión 1–2)*: redactaste las instrucciones (prompt de sistema) de tu asistente y funcionan en una herramienta gratuita de chat.
-- [ ] **M2 — Casos de prueba documentados** *(Sesión 2)*: tienes al menos 5 casos de prueba (donde antes fallaba) con resultados guardados en `docs/casos-de-prueba.md`.
-- [ ] **M3 — Corpus conectado (RAG)** *(Sesión 3)*: tu asistente **cita la fuente** normativa que usa y no inventa. Corpus cargado en `corpus/`.
-- [ ] **M4 — Interfaz web desplegada** *(Sesión 4)*: tu herramienta tiene **URL pública** (ver Parte 4) y tu primer usuario real la probó con evidencia.
-- [ ] **M5 — Análisis crítico y demo** *(Sesión 5)*: Parte 7 completada + presentación de 5 minutos.
+* [ ] **M0 — Descripción y plan** *(con Sesión 1)*: Partes 1 y 2 de este README completas.
+* [ ] **M1 — Asistente con instrucciones v1** *(Sesión 1–2)*: redactaste las instrucciones (prompt de sistema) de tu asistente y funcionan en una herramienta gratuita de chat.
+* [ ] **M2 — Casos de prueba documentados** *(Sesión 2)*: tienes al menos 5 casos de prueba guardados en `docs/casos-de-prueba.md`.
+* [ ] **M3 — Corpus conectado (RAG)** *(Sesión 3)*: tu asistente **cita la fuente** normativa que usa y no inventa. Corpus cargado en `corpus/`.
+* [ ] **M4 — Interfaz web desplegada** *(Sesión 4)*: tu herramienta tiene **URL pública** y un usuario real la probó.
+* [ ] **M5 — Análisis crítico y demo** *(Sesión 5)*: Parte 7 completada + presentación de 5 minutos.
 
 ### Bitácora de avance semanal
-| Semana | Qué hice | Enlace/captura | Dudas para la clase |
-| --- | --- | --- | --- |
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
+
+| Semana | Qué hice                                                | Enlace/captura | Dudas para la clase                         |
+| ------ | ------------------------------------------------------- | -------------- | ------------------------------------------- |
+| 1      | Definimos el problema, usuarios, alcance y fuentes.     |                | ¿El alcance es suficientemente concreto?    |
+| 2      | Desarrollamos el primer prototipo del asistente.        |                | ¿Qué casos debemos probar?                  |
+| 3      | Conectamos el corpus normativo y las fuentes del IPC.   |                | ¿Cómo evitar que la IA invente información? |
+| 4      | Desarrollamos la interfaz y realizamos una prueba real. |                | ¿Qué errores presentó?                      |
+| 5      | Analizamos resultados y preparamos la presentación.     |                | ¿Qué debemos mejorar?                       |
 
 ---
 
@@ -70,25 +62,33 @@ Marca cada hito cuando lo termines. Los hitos siguen las sesiones del curso.
 
 Todo es **gratuito y no exige tarjeta de crédito**. Tu proyecto final debería verse así:
 
-```
+```text
 [Usuario] → [Interfaz web] → [Orquestación (LangChain)] → [Modelo (OpenRouter)]
                                    ↕
                           [Tu corpus normativo (RAG)]
 ```
 
-| Pieza | Herramienta recomendada | Para qué sirve (en cristiano) |
-| --- | --- | --- |
-| **Interfaz web** | **v0.dev** (genera una app Next.js) o **Streamlit** (si tu agente trabaja en Python) | Lo que el usuario ve: cajas de texto, botones. Se la describes a la IA y ella la construye. |
-| **Orquestación** | **LangChain / LangGraph** | El "cerebro intermedio": toma la pregunta del usuario, busca en tus normas, arma el prompt y llama al modelo. |
-| **Modelo (LLM)** | **OpenRouter** — modelos con etiqueta `:free` | El "cerebro" que redacta. OpenRouter te da acceso a modelos gratuitos con una sola cuenta y una sola API key. |
-| **Memoria de fuentes (RAG)** | LangChain + almacén de vectores (**Chroma** o **FAISS** en local; **Supabase** si necesitas base de datos en la nube) | La técnica para que el modelo responda **con tus normas** y no con lo que "recuerda" (que puede ser una alucinación jurídica). |
-| **Trazabilidad** *(opcional)* | **LangSmith** (plan gratuito) | Ver qué le pasó a cada respuesta por dentro. Útil para depurar. |
+| Pieza                         | Herramienta recomendada          | Para qué sirve (en cristiano)                                     |
+| ----------------------------- | -------------------------------- | ----------------------------------------------------------------- |
+| **Interfaz web**              | **v0.dev** o **Streamlit**       | Lo que el usuario ve: campos, botones y resultados.               |
+| **Orquestación**              | **LangChain / LangGraph**        | Organiza la pregunta, busca la información y genera la respuesta. |
+| **Modelo (LLM)**              | **OpenRouter** — modelos `:free` | Genera las respuestas de la herramienta.                          |
+| **Memoria de fuentes (RAG)**  | **LangChain + Chroma o FAISS**   | Permite consultar las normas antes de responder.                  |
+| **Trazabilidad** *(opcional)* | **LangSmith**                    | Permite revisar y detectar errores del asistente.                 |
 
-> 🔑 **Regla de oro:** tu `OPENROUTER_API_KEY` va en una **variable de entorno**, jamás pegada en el código ni en el chat. Si una clave se filtra en GitHub, revócala de inmediato en openrouter.ai → Keys.
+> 🔑 **Regla de oro:** tu `OPENROUTER_API_KEY` va en una **variable de entorno**, jamás pegada en el código ni en el chat. Si se filtra en GitHub, revócala inmediatamente.
 
-Pídele a tu agente de IA que te explique esta arquitectura con tu proyecto concreto antes de escribir una línea de código.
+La herramienta **ArrendamientoClaro** funcionará así:
 
----
+1. El usuario ingresa el canon actual y el nuevo valor.
+2. Indica la fecha del último reajuste.
+3. La herramienta verifica los datos.
+4. Consulta el corpus jurídico.
+5. Compara el aumento con el límite legal.
+6. Explica el resultado de forma sencilla.
+7. Muestra la norma utilizada como fundamento.
+
+El objetivo es que el usuario conozca tanto el resultado como **la razón jurídica y la fuente normativa** que lo sustentan.
 
 ## 🚀 Parte 4 — Ruta de despliegue
 
