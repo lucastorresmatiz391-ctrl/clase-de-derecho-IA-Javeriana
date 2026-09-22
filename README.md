@@ -119,80 +119,66 @@ Si necesitas algo que Vercel no ofrece (ej. procesos de fondo, bases de datos pe
 
 ---
 
-## 🧠 Parte 5 — Guía de prompting para *vibe coding*
-
-Tu competencia más transferible a la práctica profesional: **instruir bien a la IA**. Reglas:
-
-1. **Un hito a la vez.** No le pidas "hazme todo el proyecto". Pide: "vamos por M1".
-2. **Da contexto jurídico, recibe código.** Pega tu Parte 1 y dile: "eres mi ingeniero, yo soy el abogado del proyecto".
-3. **Pide explicaciones.** "Explícame como a alguien que no sabe programar qué acabas de hacer."
-4. **Commits frecuentes.** Cada vez que algo funcione: `git add . && git commit -m "M1: instrucciones del asistente"` y push. Si rompes algo, siempre puedes volver atrás.
-5. **Nunca pegues datos personales reales** de usuarios en el chat ni en el código (Ley 1581).
-6. **Verifica como abogado.** Toda respuesta legal que dé la herramienta, contrástala con la norma. Tú respondes por lo que publicas.
-
-### Prompts de arranque por hito
+🧠 Parte 5 — Guía de prompting para vibe coding
+Tu competencia más transferible a la práctica profesional: instruir bien a la IA. Reglas:
+1. Un hito a la vez. No le pidas "hazme todo el proyecto". Pide: "vamos por M1".
+2. Da contexto jurídico, recibe código. Pega tu Parte 1 y dile: "eres mi ingeniero, yo soy el abogado del proyecto".
+3. Pide explicaciones. "Explícame como a alguien que no sabe programar qué acabas de hacer."
+4. Commits frecuentes. Cada vez que algo funcione: git add . && git commit -m "M1: instrucciones del asistente" y push. Si rompes algo, siempre puedes volver atrás.
+5. Nunca pegues datos personales reales de usuarios en el chat ni en el código (Ley 1581).
+6. Verifica como abogado. Toda respuesta legal que dé la herramienta, contrástala con la norma. Tú respondes por lo que publicas.
+Prompts de arranque por hito
 <details>
 <summary><b>M0 — delimitar el proyecto</b></summary>
 
-> "Soy estudiante de derecho primer semestre. Mi idea de proyecto es [idea]. Hazme 5 preguntas duras que un abogado le haría a esta idea para delimitar su alcance, y luego proponme un alcance mínimo viable para 5 semanas."
+"Soy estudiante de derecho primer semestre. Mi idea de proyecto es [idea]. Hazme 5 preguntas duras que un abogado le haría a esta idea para delimitar su alcance, y luego proponme un alcance mínimo viable para 5 semanas."
+
 </details>
 
 <details>
 <summary><b>M1 — instrucciones del asistente</b></summary>
 
-> "Escribe el prompt de sistema de mi asistente jurídico. Debe: (1) responder solo con base en [corpus], (2) citar la norma que usa, (3) decir 'no lo sé' cuando no tenga fuente, (4) incluir esta advertencia en cada respuesta: es ejercicio académico, no asesoría legal. Proponme 3 versiones y explícame las diferencias."
+"Escribe el prompt de sistema de mi asistente jurídico. Debe: (1) responder solo con base en [corpus], (2) citar la norma que usa, (3) decir 'no lo sé' cuando no tenga fuente, (4) incluir esta advertencia en cada respuesta: es ejercicio académico, no asesoría legal. Proponme 3 versiones y explícame las diferencias."
+
 </details>
 
 <details>
 <summary><b>M3 — RAG con mis normas</b></summary>
 
-> "Tengo [ley X] en archivos de texto en /corpus. Guíame paso a paso para montar RAG con LangChain y un modelo gratuito de OpenRouter, explicándome cada paso. Al final, el asistente debe citar artículo y norma en cada respuesta."
+"Tengo [ley X] en archivos de texto en /corpus. Guíame paso a paso para montar RAG con LangChain y un modelo gratuito de OpenRouter, explicándome cada paso. Al final, el asistente debe citar artículo y norma en cada respuesta."
+
 </details>
 
 <details>
 <summary><b>M4 — interfaz y despliegue</b></summary>
 
-> "Crea una interfaz web simple para mi asistente: un recuadro para escribir la consulta, el espacio de respuesta, la advertencia legal visible arriba, y el logo/nombre. Luego guíame para desplegarla gratis en Vercel con mi repo de GitHub. No sé programar: dime exactamente qué archivo tocar y qué copiar."
+"Crea una interfaz web simple para mi asistente: un recuadro para escribir la consulta, el espacio de respuesta, la advertencia legal visible arriba, y el logo/nombre. Luego guíame para desplegarla gratis en Vercel con mi repo de GitHub. No sé programar: dime exactamente qué archivo tocar y qué copiar."
+
 </details>
 
----
-
-## ⚖️ Parte 6 — Ética, datos y responsabilidad
-
-Estas salvaguardas son **obligatorias** y hacen parte de la evaluación:
-
-- **Advertencia visible obligatoria.** Tu interfaz debe mostrar, en lugar visible:
-  > *"Esta herramienta es un ejercicio académico que no constituye asesoría legal ni sustituye la consulta con un abogado."*
+⚖️ Parte 6 — Ética, datos y responsabilidad
+Estas salvaguardas son obligatorias y hacen parte de la evaluación:
+- Advertencia visible obligatoria. Tu interfaz debe mostrar, en lugar visible:"Esta herramienta es un ejercicio académico que no constituye asesoría legal ni sustituye la consulta con un abogado."
   - [ ] Implementada y visible en la interfaz
-- **Protección de datos (Ley 1581 de 2012).** Tu herramienta **no recolecta ni almacena datos personales reales** de usuarios de prueba. Los usuarios de prueba usan situaciones ficticias o datos inventados.
+- Protección de datos (Ley 1581 de 2012). Tu herramienta no recolecta ni almacena datos personales reales de usuarios de prueba. Los usuarios de prueba usan situaciones ficticias o datos inventados.
   - [ ] Verificado: no guardo datos personales
-- **Corpus público.** Solo fuentes públicas: leyes, decretos, jurisprudencia publicada.
+- Corpus público. Solo fuentes públicas: leyes, decretos, jurisprudencia publicada.
   - [ ] Verificado
-- **Anti-alucinaciones.** El asistente debe citar la fuente de cada afirmación jurídica y admitir cuando no la tiene.
+- Anti-alucinaciones. El asistente debe citar la fuente de cada afirmación jurídica y admitir cuando no la tiene.
   - [ ] Casos de prueba donde la herramienta se niega a inventar
-
----
-
-## 🔍 Parte 7 — Análisis crítico (insumo de tu sustentación final)
-
+🔍 Parte 7 — Análisis crítico (insumo de tu sustentación final)
 Responde con total honestidad — aquí es donde demuestras tu criterio jurídico:
+1. ¿Dónde falla tu herramienta? Describe 2 situaciones donde se equivoca o se queda corta.
+Respuesta: Puede fallar cuando la pregunta del usuario no está dentro del contenido del corpus o cuando la norma ha cambiado y la información no está actualizada. También puede interpretar incorrectamente los hechos de un caso y dar una respuesta incompleta.
+2. ¿Qué datos procesa? Qué entra, qué se guarda, qué sale.
+Respuesta: Entra la pregunta o situación jurídica planteada por el usuario. La herramienta utiliza las fuentes jurídicas públicas disponibles en su corpus y genera una respuesta basada en ellas. No se guardan datos personales reales de los usuarios de prueba.
+3. ¿Por qué no reemplaza al abogado? Argumenta en 5–8 frases.
+Respuesta: No reemplaza al abogado porque la IA puede equivocarse, interpretar mal los hechos o utilizar información incompleta. El abogado debe analizar las circunstancias particulares de cada caso. También debe verificar que las normas y jurisprudencia utilizadas estén vigentes y sean aplicables. La IA puede servir como herramienta de apoyo para buscar y organizar información jurídica. Sin embargo, no tiene la responsabilidad profesional del abogado. Por eso, toda respuesta generada por la herramienta debe ser revisada antes de utilizarse.
 
-1. **¿Dónde falla tu herramienta?** Describe 2 situaciones donde se equivoca o se queda corta.
-2. **¿Qué datos procesa?** Qué entra, qué se guarda, qué sale.
-3. **¿Por qué no reemplaza al abogado?** Argumenta en 5–8 frases.
-
----
-
-## ✅ Parte 8 — Entregables finales (Definition of Done)
-
+✅ Parte 8 — Entregables finales (Definition of Done)
 Requisitos de entrega del curso — todos deben estar ✅:
-
-- [ ] 🔗 **Solución funcionando**: resuelve el problema jurídico y está desplegada con URL pública.
-- [ ] 👤 **Usuario real**: al menos una persona externa al curso la usó, con evidencia (video corto o testimonio). Guarda la evidencia en `docs/evidencia-usuario.md`.
-- [ ] 📦 **Repositorio con historial**: este repo muestra tus avances semanales (commits + bitácora).
-- [ ] 🧠 **Análisis crítico**: Parte 7 completada.
+- [ ] 🔗 Solución funcionando: resuelve el problema jurídico y está desplegada con URL pública.
+- [ ] 👤 Usuario real: al menos una persona externa al curso la usó, con evidencia (video corto o testimonio). Guarda la evidencia en docs/evidencia-usuario.md.
+- [ ] 📦 Repositorio con historial: este repo muestra tus avances semanales (commits + bitácora).
+- [ ] 🧠 Análisis crítico: Parte 7 completada.
 - [ ] 📋 Partes 1–7 de este README completas y al día.
-
----
-
-*Construido con asistencia de IA — como se enseña en este curso.* 🧑‍⚖️🤖
